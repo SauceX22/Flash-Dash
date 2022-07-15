@@ -20,7 +20,7 @@ public class ApplyColorPreset : MonoBehaviour
         if (other.gameObject.layer == 12)
         {
             var car = other.transform.parent.GetComponent<CarCollisionSensors>();
-            camera = car.gameManager.cameraFollow.gameObject.GetComponent<Camera>();
+            camera = car.gameManager.cameraFollow.gameObject.GetComponent<Camera>(); 
             FindObjectOfType<AudioManager>().Play("NewColorZone");
 
             StartCoroutine(BlendTo());
